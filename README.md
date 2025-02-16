@@ -28,6 +28,14 @@ A powerful Telegram bot for managing and sharing media content with a credit-bas
   - View bot statistics
   - Monitor user activity
   - Track referrals
+ 
+## Configuration
+
+Key configuration variables:
+- `MAX_MEDIA_ID`: 16000 (9000 photos + 7000 videos)
+- `DEFAULT_CREDITS`: 25 credits for new users
+- `SUGGESTION_COOLDOWN`: 3600 seconds (1 hour)
+
 
 ## Setup
 
