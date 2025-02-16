@@ -1,50 +1,107 @@
 # Telegram Media Bot
 
-A Telegram bot that provides access to media (photos and videos) from a private channel using a credit system.
+A powerful Telegram bot for managing and sharing media content with a credit-based system and comprehensive admin controls.
 
-## Setup Instructions
+## Features
 
-1. Install Python requirements:
+### User Features
+- 🎯 Get random media content using credits
+- 💰 Credit system with referral rewards
+- 🔄 Referral system to earn more credits
+- 💬 Suggestion system to provide feedback
+- 📊 Check credit balance
+
+### Admin Features
+- 👥 User Management
+  - Ban/Unban users
+  - View user information
+  - Clean chat history
+  - Reset user credits
+- 💳 Credit Management
+  - Add credits to users
+  - Reset credits
+  - View credit statistics
+- 📨 Broadcasting
+  - Send messages to all users
+  - View active users
+- 📊 Statistics
+  - View bot statistics
+  - Monitor user activity
+  - Track referrals
+
+## Setup
+
+### 1. Install Required Dependencies
+
 ```bash
-pip install -r requirements.txt
+pip install python-telegram-bot
 ```
 
-2. Get your Telegram Bot Token:
-- Open Telegram and search for @BotFather
-- Send `/newbot` command
-- Follow prompts to create your bot
-- Save the API token you receive
+### 2. Configure the Bot
+- Replace `YOUR_BOT_TOKEN` in the code with your Telegram bot token.
+- Set your Telegram ID as `ADMIN_ID`.
+- Configure your private channel ID in `PRIVATE_CHANNEL_ID`.
 
-3. Configure the bot:
-- Open `telegram_bot.py`
-- Replace `YOUR_BOT_TOKEN` with your actual bot token
-- Set `ADMIN_ID` to your Telegram user ID
-- Set `PRIVATE_CHANNEL_ID` to your channel ID (format: -100xxxxxxxxxx)
-
-4. Run the bot:
+### 3. Run the Bot
 ```bash
 python telegram_bot.py
 ```
 
-## Features
+## Usage
 
-- Credit system (25 credits per new user)
-- Random photo/video sharing from private channel
-- Referral system (5 bonus credits per referral)
-- Admin panel for managing credits
-- Custom keyboard interface
+### User Commands
+- `/start` - Start the bot and get the welcome message.
+- `/media` - Get random media content (costs 1 credit).
+- `/points` - Check your credit balance.
+- `/refer` - Get your referral link.
+- `/buy` - Get information about buying credits.
+- `/suggest` - Submit a suggestion.
 
-## Commands
+### Admin Commands
+- `/admin` - View all admin commands.
+- `/broadcast` - Send a message to all users.
+- `/add_credits [user_id] [amount]` - Add credits to a user.
+- `/view_stats` - View bot statistics.
+- `/ban` or `/ben [user_id]` - Ban a user.
+- `/unban [user_id]` - Unban a user.
+- `/delete_media [message_id]` - Delete media from channel.
+- `/user_info [user_id]` - View detailed user info.
+- `/view_suggestions` - View user suggestions.
+- `/reset_credits [user_id]` - Reset user credits.
+- `/view_active` - Show active users.
+- `/clear_history [user_id]` - Clear a user's media history.
+- `/clean_chat [user_id]` - Clean recent chat with a user.
+- `/delete_requests` - Delete all user suggestions.
+- `/view_users` - View list of all users.
 
-User Commands:
-- `/start` - Start the bot
-- `/video` - Get random video (costs 1 credit)
-- `/photo` - Get random photo (costs 1 credit)
-- `/points` - Check remaining credits
-- `/refer` - Generate referral link
-- `/buy` - Contact admin to buy credits
+## Important Notes
 
-Admin Commands:
-- `/admin` - View admin commands
-- `/add_credits` - Add credits to user
-- `/view_stats` - View bot statistics
+### Media Content
+- Store media in a private channel.
+- Bot will randomly select from available media.
+- Supports both photos and videos.
+
+### Credit System
+- New users get 25 credits by default.
+- Each media view costs 1 credit.
+- Users can earn credits through referrals.
+- Admins can manage user credits.
+
+### Security
+- Admin commands are protected.
+- User activities are logged.
+- Ban system for misuse prevention.
+
+## File Structure
+
+```
+bot/
+├── telegram_bot.py    # Main bot code
+├── user_data.json      # User data storage
+└── README.md           # Documentation
+```
+
+## Support
+For support or inquiries, contact the admin through Telegram.
+
+This `README.md` file covers all the essential details of your Telegram bot, including installation, usage, and features, in an easy-to-read format.
