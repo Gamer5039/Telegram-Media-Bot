@@ -8,10 +8,10 @@ import json
 # Configuration
 USER_DATA_FILE = 'user_data.json'
 MAX_MEDIA_ID = 16000  # Total number of media items (9000 photos + 7000 videos)
-ADMIN_ID = "6130816114"  # Your Telegram ID
+ADMIN_ID = "61xxxx14"  # Your Telegram ID
 ADMIN_CONTACT = "https://t.me/Epokos"
 DEFAULT_CREDITS = 25
-PRIVATE_CHANNEL_ID = "-1002426292636"  # Your private channel ID
+PRIVATE_CHANNEL_ID = "-10xxxxxxxx36"  # Your private channel ID
 
 # Initialize user data
 def load_user_data():
@@ -838,7 +838,7 @@ async def shutdown(app):
 def main():
     try:
         # Build application
-        application = Application.builder().token("7918104066:AAGWoTR7LzgJwJTvVID9mUbsDJiVNcsAr3k").build()
+        application = Application.builder().token("791xxxxxxxxxxxxxxxxxxxxxxxxxxxsAr3k").build()
         
         # Basic commands
         application.add_handler(CommandHandler("start", start))
