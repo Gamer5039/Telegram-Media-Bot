@@ -42,6 +42,10 @@ Key configuration variables:
 ### 1. Install Required Dependencies
 
 ```bash
+python-telegram-bot==20.3
+```
+
+```bash
 pip install python-telegram-bot
 ```
 
